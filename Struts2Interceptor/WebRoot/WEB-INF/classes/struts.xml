@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd" >
+<struts>
+<package name="struts2" extends="struts-default">
+<interceptors>
+<interceptor name="userPopedom" class="com.x1a0ch1.interceptor.UserPopedom"></interceptor>
+</interceptors>
+<action name="*" class="com.x1a0ch1.action.{1}Action">
+<result name="success">/{1}Output.jsp</result>
+<result name="input">/{1}Input.jsp</result>
+<result name="error">/{1}Error.jsp</result>
+<interceptor-ref name="userPopedom"></interceptor-ref>
+</action>
+</package>
+</struts>

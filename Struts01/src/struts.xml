@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts><!-- 根节点-->
+<package name="default" extends="struts-default">
+<!--定义register的Action 其实现类为com.x1a0ch1.action.RegisterAction-->
+<action name="index">
+<!--定义处理结果与视图资源之间的关系-->
+<result>/index.jsp</result>
+</action>
+</package>
+</struts>

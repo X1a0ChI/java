@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd" >
+<struts>
+<package name="struts2" extends="struts-default">
+<interceptors>
+<interceptor name="myInterceptor" class="com.x1a0ch1.interceptor2.MyInterceptor">
+</interceptor>
+<interceptor name="myInterceptor1" class="com.x1a0ch1.interceptor3.MyInterceptor">
+<param name="interceptorName">自定义拦截器</param>
+</interceptor>
+<interceptor-stack name="myInterceptorStack">
+<interceptor-ref name="myInterceptor"></interceptor-ref>
+<interceptor-ref name="myInterceptor1"></interceptor-ref>
+</interceptor-stack>
+</interceptors>
+<action name="*" class="com.x1a0ch1.action.{1}Action">
+<result name="success">/{1}Output.jsp</result>
+<result name="input">/{1}Input.jsp</result>
+<interceptor-ref name="myInterceptorStack"></interceptor-ref>
+<interceptor-ref name="defaultStack"></interceptor-ref>
+</action>
+</package>
+</struts>

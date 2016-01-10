@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+"-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+<field name="name">
+<field-validator type="requiredstring">
+<param name="trim">true</param>
+<message>联系人姓名必须输入</message>
+</field-validator>
+<field-validator type="stringlength>
+<param name="min">2</param>
+<param name="max">5</param>
+<message>姓名长度必须在${min}和${max}之间</message>
+</field-validator>
+</field>
+<field name="age">
+<field-validator type="int">
+<param name="min">0</param>
+<param name="max">100</param>
+<message>年龄必须在${min}和${max}之间</message>
+</field-validator>
+</field>
+<field name="phone">
+<field-validator type="stringlength">
+<param name="min">11</param>
+<param name="max">12</param>
+<message>联系电话的长度必须在${min}和${max}之间</message>
+</field-validator>
+</field>
+<field name="email">
+<field-validator type="email">
+<message>请输入正确的邮箱地址</message>
+</field-validator>
+</field>
+<field name="homePage">
+<field-validator type="url">
+<message>请输入正确的个人主页</message>
+</field-validator>
+</field>
+
+</validators>
